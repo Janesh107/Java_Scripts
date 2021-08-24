@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Java Script</title>
+    <script>
+      function A()
+      {
+      var a=document.getElementById("txt1").value;
+
+      var r=0;
+      if(a!=null || a!="")
+      {
+        r =parseInt(a);
+      }
+
+      var cir =3.14*r**2;
+      document.getElementById("s1").innerHTML=a;
+
+      document.getElementById("txt2").value=cir;
+    }
+    </script>
+  </head>
+  <body>
+    <form method="post">
+      <p>Radius: <input onkeyup="A()" type="text" name="t1" value="" id="txt1"></p>
+      <p>Circumference: <input type="text" name="t2" value="" id="txt2"></p>
+
+    </form>
+    <p>
+      Radius: <span id="s1"></span><br>
+    </p>
+  </body>
+</html>

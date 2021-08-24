@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Java Script</title>
+    <script>
+      function A()
+      {
+      var a=document.getElementById("txt1").value;
+      var b=document.getElementById("txt2").value;
+      var c=document.getElementById("txt3").value;
+      var amt=0;
+      if(a!=null || a!="")
+      {
+        amt =parseInt(a);
+      }
+      var roi=0;
+      if(b!=null || b!="")
+      {
+        roi=parseInt(b);
+      }
+      var t=0;
+      if(c!=null || c!="")
+      {
+        t=parseInt(c);
+      }
+      var si =(amt*roi*t)/1200;
+      document.getElementById("s1").innerHTML=a;
+      document.getElementById("s2").innerHTML=b;
+      document.getElementById("s3").innerHTML=c;
+
+      document.getElementById("txt4").value=si;
+    }
+    </script>
+  </head>
+  <body>
+    <form method="post">
+      <p>Amount<input onkeyup="A()" type="text" name="t1" value="" id="txt1"></p>
+      <p>ROI<input onkeyup="A()" type="text" name="t2" value="" id="txt2"></p>
+      <p>Time<input onkeyup="A()" type="text" name="t3" value="" id="txt3"></p>
+      <p>Interest<input type="text" name="t4" value="" id="txt4"></p>
+
+    </form>
+    <p>
+        Amount: <span id="s1"></span><br>
+        ROI: <span id="s2"></span><br>
+        Time: <span id="s3"></span><br>
+    </p>
+  </body>
+</html>

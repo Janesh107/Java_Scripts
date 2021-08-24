@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Area of rectangle</title>
+    <script>
+      Function A()
+      {
+        var a=document.getElementBy("txt1").value;
+        var b=document.getElementById("txt2").value;
+
+        var a=0;
+        if(a!=0 || a!="")
+        {
+          a=parseInt(a);
+        }
+
+        var b=0;
+        if(b!=0 || b!="")
+        {
+          b=parseInt(b);
+        }
+
+        var ar=a*b;
+
+        document.getElementById("s1").innerHTML=a;
+        document.getElementById("s2").innerHTML=b;
+
+        document.getElementById("txt3").value=ar;
+      }
+    </script>
+  </head>
+  <body>
+    <form method="post">
+      <p>Length: <input type="text" onkeyup="A()" name="" value="" id="txt1"></p>
+      <p>Bredth: <input type="text" onkeyup="A()" name="" value="" id="txt2"></p>
+      <p>Area: <input type="text" name="" value="" id="txt3"></p>
+    </form>
+
+    <p>Length:<span id="s1"></span><br>
+      Bredth: <span id="s2"></span><br>
+    </p>
+  </body>
+</html>

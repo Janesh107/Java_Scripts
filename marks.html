@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Java Script</title>
+    <script>
+      function A()
+      {
+      var a=document.getElementById("txt1").value;
+      var b=document.getElementById("txt2").value;
+      var c=document.getElementById("txt3").value;
+      var phy=0;
+      if(a!=null || a!="")
+      {
+        phy =parseInt(a);
+      }
+      var che=0;
+      if(b!=null || b!="")
+      {
+        che=parseInt(b);
+      }
+      var bio=0;
+      if(c!=null || c!="")
+      {
+        bio=parseInt(c);
+      }
+      var sum =phy+che+bio;
+      var per=((phy+che+bio)/300)*100;
+      document.getElementById("s1").innerHTML=a;
+      document.getElementById("s2").innerHTML=b;
+      document.getElementById("s3").innerHTML=c;
+
+      document.getElementById("txt4").value=sum;
+      document.getElementById("txt5").value=per;
+    }
+    </script>
+  </head>
+  <body>
+    <form method="post">
+      <p>Physics: <input onkeyup="A()" type="text" name="t1" value="" id="txt1"></p>
+      <p>Chemistry: <input onkeyup="A()" type="text" name="t2" value="" id="txt2"></p>
+      <p>Bio: <input onkeyup="A()" type="text" name="t3" value="" id="txt3"></p>
+      <p>Total Marks: <input type="text" name="t4" value="" id="txt4"></p>
+      <p>Percentage: <input type="text" name="" value="" id="txt5"></p>
+
+    </form>
+    <p>
+        Physics: <span id="s1"></span><br>
+        Chemistry: <span id="s2"></span><br>
+        Bio: <span id="s3"></span><br>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!--Area of circle-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dom Area Circle</title>
+    <script>
+      function A()
+      {
+        var a=document.F1.T1.value;
+        var r=0;
+        if(a!=null || a!="")
+        {
+          r=parseInt(a);
+        }
+        var ar=3.14*r*r;
+        document.F1.T2.value=ar;
+      }
+    </script>
+  </head>
+  <body>
+    <form name="F1" method="post">
+      <p>Radius: <input type="text" onkeyup="A()" name="T1" value=""></p>
+      <p>Area: <input type="text" name="T2" value=""></p>
+    </form>
+  </body>
+</html>
